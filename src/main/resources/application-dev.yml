@@ -1,0 +1,13 @@
+eureka:
+  instance:
+    preferIpAddress: true
+    hostname: eureka-0
+  client:
+    service-url:
+      defaultZone: http://eureka-0.eureka-service.default.svc.cluster.local:8761/eureka
+#Here eureka-0: pod name/hostname of eureka instance in the kubernetes cluster. 0 denotes it may be 1st instance.
+#eureka-service: name of Kubernetes service associated with the eureka server.
+  #This provides stable endpoint for accessing pods inside the cluster
+#default :  namespace in which the eureka service and pods are deployed. used to isolate resources within a cluster.
+#svc.cluster.local: domain suffix for Kubernetes services within the cluster.
+#/eureka : eureka server`s own api endpoint, used by eureka clients to register themselves

@@ -1,0 +1,20 @@
+server:
+  port: 9093
+
+spring:
+  application:
+    name: User-Service
+  profiles:
+      active: dev
+  main:
+    banner-mode: off #turn off spring boot banner
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update #everytime the server starts it creates new table if in create mode
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect # dialect for converting orm to sql language
+  #logging:
+  # level:
+  #  root: warn
