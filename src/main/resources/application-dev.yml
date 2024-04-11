@@ -11,3 +11,4 @@ eureka:
 #default :  namespace in which the eureka service and pods are deployed. used to isolate resources within a cluster.
 #svc.cluster.local: domain suffix for Kubernetes services within the cluster.
 #/eureka : eureka server`s own api endpoint, used by eureka clients to register themselves
+#ewureka wont be available on public ip
