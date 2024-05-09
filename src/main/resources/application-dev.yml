@@ -12,3 +12,7 @@ eureka:
 #svc.cluster.local: domain suffix for Kubernetes services within the cluster.
 #/eureka : eureka server`s own api endpoint, used by eureka clients to register themselves
 #ewureka wont be available on public ip
+
+#gateway for external ip access ingres and aws load balancer are used.
+#for eureka to seamlessly work with these we need prefferedIpAddress and hostname
+# avoids unknown host exception
